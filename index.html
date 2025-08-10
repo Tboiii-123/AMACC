@@ -13,7 +13,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
 
 
   <script>
@@ -358,14 +358,17 @@
     </p>
 
     <!-- Newsletter Form -->
-    <form class="max-w-md mx-auto flex gap-2" onsubmit="event.preventDefault(); alert('Subscribed — replace with real backend')" data-aos="fade-up" data-aos-delay="800">
-      <input type="email" placeholder="Enter your email" 
-             class="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500" required>
-      <button type="submit" 
-              class="px-6 py-3 bg-primary-600 text-white font-semibold rounded-md hover:bg-primary-700">
-        Subscribe
-      </button>
-    </form>
+    <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-2" 
+      onsubmit="event.preventDefault(); alert('Subscribed — replace with real backend')" 
+      data-aos="fade-up" data-aos-delay="800">
+  <input type="email" placeholder="Enter your email" required
+         class="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500" />
+  <button type="submit" 
+          class="px-6 py-3 bg-primary-600 text-white font-semibold rounded-md hover:bg-primary-700">
+    Subscribe
+  </button>
+</form>
+
 
   </div>
 </section>
@@ -435,6 +438,7 @@
     </div>
   </div>
 </footer>
+
 
 <script>
   // Auto-update year
