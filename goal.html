@@ -23,29 +23,64 @@
 <body class="antialiased text-gray-800 bg-white">
 
 <!-- Header -->
-<header class="bg-white shadow-sm sticky top-0 z-40">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-md bg-primary-500 flex items-center justify-center text-white font-bold">A</div>
-        <div class="hidden sm:block">
-          <span class="font-semibold text-lg">AMAAC</span>
-          <div class="text-xs text-gray-500">American Muslim & Arab Affairs Council</div>
+ <header class="bg-white shadow-sm sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="#" class="flex items-center gap-3">
+          <!-- Replace with your logo.svg or image -->
+          <img src="img/logo.jpg" 
+
+     alt="AMAAC Logo" 
+     class="h-12 w-auto rounded-md object-contain">
+
+          <div class="hidden sm:block">
+            <span class="font-semibold text-lg">AMAAC</span>
+            <div class="text-xs text-gray-500">American Muslim & Arab Affairs Council</div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="index.html" class="text-gray-700 hover:text-primary-600">Home</a>
+          <a href="about.html" class="text-gray-700 hover:text-primary-600">About</a>
+          <a href="work.html" class="text-gray-700 hover:text-primary-600">Our Work</a>
+          <a href="involved.html" class="text-gray-700 hover:text-primary-600">Get Involved</a>
+          <a href="goal.html" class="text-gray-700 hover:text-primary-600">Goal</a>
+          <a href="contact.html" class="text-gray-700 hover:text-primary-600">Contact</a>
+          <a href="team.html" class="text-gray-700 hover:text-primary-600">Team</a>
+         
+          <a href="#donate" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-accent/10 border-accent hover:bg-accent/20">Donate</a>
+        
+        </nav>
+
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobileBtn" aria-label="Open menu" class="p-2 rounded-md hover:bg-gray-100">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"></path>
+            </svg>
+          </button>
         </div>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="index.html" class="text-gray-700 hover:text-primary-600">Home</a>
-        <a href="about.html" class="text-gray-700 hover:text-primary-600">About</a>
-        <a href="goals.html" class="text-primary-600 font-medium">Our Goals</a>
-        <a href="work.html" class="text-gray-700 hover:text-primary-600">Our Work</a>
-        <a href="get-involved.html" class="text-gray-700 hover:text-primary-600">Get Involved</a>
-        <a href="news.html" class="text-gray-700 hover:text-primary-600">News</a>
-        <a href="contact.html" class="text-gray-700 hover:text-primary-600">Contact</a>
-        <a href="donate.html" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md bg-accent/10 border-accent hover:bg-accent/20">Donate</a>
-      </nav>
+      </div>
     </div>
-  </div>
-</header>
+
+    <!-- Mobile menu (hidden by default) -->
+    <div id="mobileMenu" class="md:hidden hidden border-t">
+      <div class="px-4 py-3 space-y-2">
+        <a href="index.html" class="block text-gray-700">Home</a>
+        <a href="about.html" class="block text-gray-700">About</a>
+        <a href="work.html" class="block text-gray-700">Our Work</a>
+        <a href="involved.html" class="block text-gray-700">Get Involved</a>
+        <a href="goal.html" class="block text-gray-700">Goal</a>
+        <a href="contact.html" class="block text-gray-700">Contact</a>
+        <a href="team.html" class="block text-gray-700">Team</a>
+        
+          <a href="#donate" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-accent/10 border-accent hover:bg-accent/20">Donate</a>
+        
+      </div>
+    </div>
+    
+  </header>
 
 <!-- Hero -->
 <section class="relative bg-primary-500 text-white py-16">
