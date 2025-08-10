@@ -20,22 +20,31 @@
     }
   </script>
   <style>
-        .hero-section {
-  height: 100vh; /* full screen height */
-}
-
-    .hero-img {
-      
-  background-image: url('img/about4.avif'); /* Change path to your image */
+.hero-img {
+  background-image: url('/img/about4.avif');
   background-size: cover;
-
-    background-repeat: no-repeat;
-    background-position: center;
-    
-    
-    
-  height: 500px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 600px;
+  position: relative;
 }
+
+.hero-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 1;
+}
+
+.hero-img > div {
+  position: relative;
+  z-index: 2;
+}
+
 
   </style>
 </head>
@@ -86,12 +95,22 @@
 </header>
 
 <!-- Hero -->
-<section class="hero-section relative  text-black">
-  <div class="max-w-5xl mx-auto px-4 text-center">
-    <h1 class="text-3xl md:text-4xl font-bold">About Us</h1>
-    <p class="mt-3 text-lg max-w-2xl mx-auto">Promoting mutual understanding, defending rights, and empowering Arab & Muslim communities globally.</p>
+<!-- Hero -->
+<section class="hero-section relative text-white">
+  <div class="hero-img flex items-center justify-center">
+    <div class="text-center px-4">
+      <h1 class="text-3xl md:text-4xl font-bold">
+        About Us
+      </h1>
+      <p class="mt-3 text-lg max-w-2xl mx-auto">
+        Promoting mutual understanding, defending rights, and empowering Arab & Muslim communities globally.
+      </p>
+    </div>
   </div>
 </section>
+
+
+
 
 
 <!-- Who We Are -->
