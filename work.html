@@ -20,6 +20,47 @@
       }
     }
   </script>
+  <style>
+    .hero-img-work {
+  background-image: url('/img/work2.avif'); /* Replace with your actual image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img-work::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Overlay for readability */
+  z-index: 1;
+}
+
+.hero-img-work > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Mobile: ensure full image is visible */
+@media (max-width: 768px) {
+  .hero-img-work {
+    background-size: contain;
+    background-position: center;
+    height: auto;
+    min-height: 600px;
+  }
+}
+
+  </style>
 </head>
 <body class="antialiased text-gray-800 bg-white">
 
@@ -83,13 +124,16 @@
     
   </header>
 
-  <!-- Hero -->
-  <section class="bg-primary-500 text-white py-16">
-    <div class="max-w-5xl mx-auto px-4 text-center">
-      <h1 class="text-3xl md:text-4xl font-bold">Our Work</h1>
-      <p class="mt-3 text-lg max-w-2xl mx-auto">Addressing critical issues affecting Muslims and Arabs — locally and globally.</p>
-    </div>
-  </section>
+  <!-- Our Work Section -->
+<section class="hero-img-work relative text-white">
+  <div class="max-w-5xl mx-auto px-4 text-center">
+    <h1 class="text-3xl md:text-4xl font-bold">Our Work</h1>
+    <p class="mt-3 text-lg max-w-2xl mx-auto">
+      Addressing critical issues affecting Muslims and Arabs in the USA and all over the world.
+    </p>
+  </div>
+</section>
+
 
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
 
@@ -98,7 +142,12 @@
       <div class="md:flex md:items-center md:justify-between">
         <div>
           <h2 class="text-2xl font-semibold text-gray-800">What We Do</h2>
-          <p class="mt-3 text-gray-600 max-w-2xl">AMAAC works across advocacy, policy, legal aid, media outreach, refugee support, and youth development to protect rights and strengthen communities.</p>
+          <p class="mt-3 text-gray-600 max-w-2xl">AMAAC stands at the forefront of advocacy, working tirelessly to 
+protect the civil rights and address the concerns of Muslims and 
+Arabs. We engage with policymakers, educate the public, and 
+mobilize our community to challenge discrimination, promote 
+equitable policies, and ensure our voices are integral to the national 
+dialogue. .</p>
         </div>
         <div class="mt-6 md:mt-0">
           <a href="get-involved.html" class="inline-flex items-center px-4 py-2 rounded-md bg-primary-500 text-white shadow hover:bg-primary-600">Join Our Work</a>
@@ -111,13 +160,15 @@
       <div class="grid md:grid-cols-3 gap-6 items-start">
         <div class="md:col-span-2">
           <h3 id="civil-rights" class="text-xl font-semibold text-gray-800">Civil Rights & Anti-Discrimination</h3>
-          <p class="mt-3 text-gray-600">We defend civil liberties and combat Islamophobia and anti-Arab discrimination through legal support, monitoring, and public education.</p>
 
           <ul class="mt-4 space-y-2 list-disc list-inside text-gray-600">
-            <li>Legal clinics & referral networks for victims of discrimination.</li>
-            <li>Monitoring discriminatory practices in workplaces, schools, and law enforcement.</li>
-            <li>Public awareness campaigns to challenge bias and misinformation.</li>
-            <li>Know-Your-Rights workshops and resources.</li>
+            <li> Combating Islamophobia and anti-Arab sentiment.</li>
+            <li> Addressing workplace and housing discrimination.</li>
+            <li> Protecting freedom of speech and religious expression.</li>
+            <li> Advocating against unlawful surveillance and profiling</li>
+            <li> Providing legal resources and support for victims of 
+discrimination.</li>
+
           </ul>
         </div>
 
@@ -132,17 +183,30 @@
     <!-- Civic engagement -->
     <section aria-labelledby="civic-engagement" class="bg-gray-50 p-6 rounded-lg">
       <h3 id="civic-engagement" class="text-xl font-semibold text-gray-800">Civic Engagement & Political Participation</h3>
-      <p class="mt-3 text-gray-600">We increase representation and empower communities to participate in civic life through voter education, leadership training, and policy advocacy.</p>
+
 
       <div class="mt-4 grid sm:grid-cols-2 gap-4">
         <div class="p-4 bg-white border rounded-lg shadow-sm">
           <h4 class="font-semibold">Voter Education</h4>
-          <p class="mt-2 text-sm text-gray-600">Nonpartisan voter registration drives and informational workshops.</p>
+          <p class="mt-2 text-sm text-gray-600"> Encouraging voter registration and participation. </p>
         </div>
+        
         <div class="p-4 bg-white border rounded-lg shadow-sm">
           <h4 class="font-semibold">Leadership Programs</h4>
           <p class="mt-2 text-sm text-gray-600">Training for emerging leaders to run for office and lead civic initiatives.</p>
         </div>
+
+        <div class="p-4 bg-white border rounded-lg shadow-sm">
+          <h4 class="font-semibold">Community Advocacy</h4>
+          <p class="mt-2 text-sm text-gray-600">  Facilitating community advocacy on local, state, and national 
+levels. </p>
+        </div>
+        <div class="p-4 bg-white border rounded-lg shadow-sm">
+          <h4 class="font-semibold">Leadership Development</h4>
+          <p class="mt-2 text-sm text-gray-600"> Developing future leaders and advocates within our 
+communities. </p>
+        </div>
+        
       </div>
     </section>
 
@@ -153,17 +217,18 @@
         <p class="mt-3 text-gray-600">We engage with media to promote fair coverage, produce educational content, and amplify voices that counter negative narratives.</p>
 
         <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
-          <li>Media training for community spokespeople.</li>
-          <li>Press outreach and rapid response to misinformation.</li>
-          <li>Production of articles, videos, and podcasts highlighting community stories.</li>
+          <li> Challenging stereotypes and promoting accurate portrayals of 
+American Muslims and Arabs in media</li>
+          <li> Developing public education campaigns to foster greater 
+understanding</li>
+<li> Engaging with journalists and media outlets to ensure fair and 
+balanced reporting</li>
+<li> Developing public education campaigns to foster greater 
+understanding. </li>
+          
         </ul>
       </div>
 
-      <div class="bg-white border rounded-lg p-4 shadow-sm">
-        <h4 class="font-semibold text-primary-600">Press Inquiries</h4>
-        <p class="mt-2 text-sm text-gray-600">Contact our communications team for interviews or statements.</p>
-        <a href="contact.html#press" class="mt-4 inline-block px-3 py-2 rounded-md border bg-primary-500 text-white">Contact Press</a>
-      </div>
     </section>
 
     <!-- Immigration & refugee support -->
@@ -173,13 +238,22 @@
 
       <div class="mt-4 grid sm:grid-cols-2 gap-4">
         <div class="p-4 bg-gray-50 rounded-lg">
-          <h4 class="font-semibold">Resettlement Assistance</h4>
-          <p class="mt-2 text-sm text-gray-600">Partnerships with local NGOs to provide housing, legal, and social services.</p>
+          <h4 class="font-semibold">Humane Immigration Reform</h4>
+          <p class="mt-2 text-sm text-gray-600">Advocating for humane and just immigration policies.</p>
         </div>
+
         <div class="p-4 bg-gray-50 rounded-lg">
-          <h4 class="font-semibold">Policy Advocacy</h4>
-          <p class="mt-2 text-sm text-gray-600">Campaigns and briefings that promote fair and humane immigration practices.</p>
+          <h4 class="font-semibold">Newcomer Support</h4>
+          <p class="mt-2 text-sm text-gray-600"> Providing resources and support for new immigrants and 
+refugees.</p>
         </div>
+
+        <div class="p-4 bg-gray-50 rounded-lg">
+          <h4 class="font-semibold">Fair Immigration</h4>
+          <p class="mt-2 text-sm text-gray-600"> Working to combat discriminatory immigration practices.</p>
+        </div>
+        
+        
       </div>
     </section>
 
@@ -190,9 +264,12 @@
         <p class="mt-3 text-gray-600">We raise awareness about global human rights concerns and advocate for U.S. foreign policies that promote peace, dignity, and justice.</p>
 
         <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
-          <li>Independent research & policy papers on regional issues.</li>
-          <li>Engagements with lawmakers and international bodies.</li>
-          <li>Humanitarian initiatives and rapid response programs.</li>
+          <li> Raising awareness about human rights issues affecting Muslim 
+and Arab communities globally.</li>
+          <li> Advocating for U.S. foreign policies that promote peace, justice, 
+and human dignity in the Middle East and beyond. </li>
+          <li> Supporting humanitarian efforts in regions facing conflict or 
+crisis. </li>
         </ul>
       </div>
 
@@ -211,12 +288,20 @@
       <div class="mt-4 grid sm:grid-cols-2 gap-4">
         <div class="p-4 bg-white border rounded-lg shadow-sm">
           <h4 class="font-semibold">Workshops & Camps</h4>
-          <p class="mt-2 text-sm text-gray-600">Leadership camps, civic skills trainings, and mentorship programs for young people.</p>
+          <p class="mt-2 text-sm text-gray-600"> Investing in programs that empower youth and foster their civic 
+leadership..</p>
         </div>
         <div class="p-4 bg-white border rounded-lg shadow-sm">
           <h4 class="font-semibold">Community Grants</h4>
-          <p class="mt-2 text-sm text-gray-600">Small grants to support local community projects and grassroots initiatives.</p>
+          <p class="mt-2 text-sm text-gray-600"> Supporting initiatives that strengthen community institutions and 
+networks. </p>
         </div>
+        <div class="p-4 bg-white border rounded-lg shadow-sm">
+          <h4 class="font-semibold">Community Grants</h4>
+          <p class="mt-2 text-sm text-gray-600">  Promoting interfaith and intercultural dialogue and 
+collaboration.</p>
+        </div>
+        
       </div>
     </section>
 
@@ -225,8 +310,8 @@
       <h3 class="text-xl font-semibold text-gray-800">Want to help amplify our impact?</h3>
       <p class="mt-3 text-gray-600">Volunteer, donate, or partner with AMAAC to support legal aid, civic programs, and community resilience.</p>
       <div class="mt-6 flex flex-col sm:flex-row justify-center gap-3">
-        <a href="get-involved.html" class="inline-flex items-center px-5 py-2 rounded-md bg-primary-500 text-white">Get Involved</a>
-        <a href="donate.html" class="inline-flex items-center px-5 py-2 rounded-md border border-accent text-accent bg-accent/10">Donate</a>
+        <a href="involved.html" class="inline-flex items-center px-5 py-2 rounded-md bg-primary-500 text-white">Get Involved</a>
+        <a href="index.html" class="inline-flex items-center px-5 py-2 rounded-md border border-accent text-accent bg-accent/10">Donate</a>
         <a href="contact.html" class="inline-flex items-center px-5 py-2 rounded-md border">Contact Us</a>
       </div>
     </section>
@@ -234,7 +319,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-50 border-t">
+  <footer class="bg-gray-900 text-gray-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-gray-500">
       © <span id="year"></span> AMAAC. All rights reserved.
     </div>
@@ -243,6 +328,15 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
+<script>
+    // small interactivity
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+  
 </body>
 </html>

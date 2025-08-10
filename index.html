@@ -45,20 +45,21 @@
   background-position: top center; /* show the top part */
 }
 
+
   </style>
 </head>
 <body class="antialiased text-gray-800 bg-white">
 
   <!-- NAV -->
+  
   <header class="bg-white shadow-sm sticky top-0 z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <a href="#" class="flex items-center gap-3">
           <!-- Replace with your logo.svg or image -->
-          <img src="img/logo.jpg" 
-
-     alt="AMAAC Logo" 
+               <img src="img/logo.jpg" alt="AMAAC Logo" 
      class="h-12 w-auto rounded-md object-contain">
+     
 
           <div class="hidden sm:block">
             <span class="font-semibold text-lg">AMAAC</span>
@@ -76,8 +77,8 @@
           <a href="team.html" class="text-gray-700 hover:text-primary-600">Team</a>
          
         
-          <a href="index.html" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-accent/10 border-accent hover:bg-accent/20">Donate</a>
-        
+       <a href="index.html" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-gray-900 text-white">Donate</a>
+           
         </nav>
 
 
@@ -103,12 +104,14 @@
         <a href="contact.html" class="block text-gray-700">Contact</a>
         <a href="team.html" class="block text-gray-700">Team</a>
         
-          <a href="#donate" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-accent/10 border-accent hover:bg-accent/20">Donate</a>
-        
+          
+       <a href="index.html" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-gray-900 text-white">Donate</a>
+           
       </div>
     </div>
 
   </header>
+
 
   <!-- HERO -->
   <main>
@@ -389,8 +392,7 @@
 </script>
 
   </main>
-
-  <script>
+<script>
     // small interactivity
     document.getElementById('year').textContent = new Date().getFullYear();
     const mobileBtn = document.getElementById('mobileBtn');
@@ -399,5 +401,6 @@
       mobileMenu.classList.toggle('hidden');
     });
   </script>
+  
 </body>
 </html>

@@ -175,5 +175,15 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
+<script>
+    // small interactivity
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+  
 </body>
 </html>

@@ -19,6 +19,48 @@
       }
     }
   </script>
+
+  <style>
+    .hero-img {
+  background-image: url('/img/team.avif'); /* Replace with your actual image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+  z-index: 1;
+}
+
+.hero-img > * {
+  position: relative;
+  z-index: 2; /* Keeps text above overlay */
+}
+
+/* Mobile: show the whole image without cropping */
+@media (max-width: 768px) {
+  .hero-img {
+    background-size: contain;
+    background-position: center;
+    height: auto;
+    min-height: 600px;
+  }
+}
+
+  </style>
 </head>
 <body class="antialiased text-gray-800 bg-white">
 
@@ -84,12 +126,17 @@
   </header>
 
 <!-- Hero -->
-<section class="relative bg-primary-500 text-white py-16">
+<section class="hero-img relative text-white">
   <div class="max-w-5xl mx-auto px-4 text-center">
     <h1 class="text-3xl md:text-4xl font-bold">Our Team</h1>
-    <p class="mt-3 text-lg max-w-2xl mx-auto">A diverse and inspiring team committed to AMAAC’s vision of peace, justice, and empowerment.</p>
+    <p class="mt-3 text-lg max-w-2xl mx-auto">
+      Our diverse and inspiring team is committed to fulfilling AMAAC's vision.
+      Our members combine deep expertise and a shared passion for serving
+      the causes of peace and justice.
+    </p>
   </div>
 </section>
+
 
 <!-- Leadership -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -97,7 +144,7 @@
   <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
     <!-- Member -->
     <div class="bg-white border rounded-lg shadow-sm overflow-hidden">
-      <img src="https://via.placeholder.com/400x300" alt="Executive Director" class="w-full h-48 object-cover">
+      <img src="img/director.avif" alt="Executive Director" class="w-full h-48 object-cover">
       <div class="p-6">
         <h3 class="font-semibold text-lg text-primary-600">Jane Doe</h3>
         <p class="text-sm text-gray-500">Executive Director</p>
@@ -107,7 +154,7 @@
 
     <!-- Member -->
     <div class="bg-white border rounded-lg shadow-sm overflow-hidden">
-      <img src="https://via.placeholder.com/400x300" alt="President" class="w-full h-48 object-cover">
+      <img src="img/director2.avif" alt="President" class="w-full h-48 object-cover">
       <div class="p-6">
         <h3 class="font-semibold text-lg text-primary-600">Ahmed Ali</h3>
         <p class="text-sm text-gray-500">President</p>
@@ -117,7 +164,7 @@
 
     <!-- Member -->
     <div class="bg-white border rounded-lg shadow-sm overflow-hidden">
-      <img src="https://via.placeholder.com/400x300" alt="Board Member" class="w-full h-48 object-cover">
+      <img src="img/directo4.avif" alt="Board Member" class="w-full h-48 object-cover">
       <div class="p-6">
         <h3 class="font-semibold text-lg text-primary-600">Fatima Khan</h3>
         <p class="text-sm text-gray-500">Board Member</p>
@@ -165,6 +212,15 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-
+<script>
+    // small interactivity
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+  
 </body>
 </html>

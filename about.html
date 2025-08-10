@@ -45,6 +45,15 @@
   z-index: 2;
 }
 
+/* Mobile: show the full image */
+@media (max-width: 768px) {
+  .hero-img {
+    background-size: contain;
+    background-position: center;
+    height: auto; /* let height adjust to image ratio */
+    min-height: 600px; /* keep it from being too small */
+  }
+}
 
   </style>
 </head>
@@ -55,7 +64,9 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-md bg-primary-500 flex items-center justify-center text-white font-bold">A</div>
+             <img src="img/logo.jpg" alt="AMAAC Logo" 
+     class="h-12 w-auto rounded-md object-contain">
+     
         <div class="hidden sm:block">
           <span class="font-semibold text-lg">AMAAC</span>
           <div class="text-xs text-gray-500">American Muslim & Arab Affairs Council</div>
@@ -70,7 +81,9 @@
           <a href="contact.html" class="text-gray-700 hover:text-primary-600">Contact</a>
           <a href="team.html" class="text-gray-700 hover:text-primary-600">Team</a>
          
-          <a href="#donate" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-accent/10 border-accent hover:bg-accent/20">Donate</a>
+        
+       <a href="index.html" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-gray-900 text-white">Donate</a>
+             
         </nav>
         
 
@@ -87,15 +100,16 @@
         <a href="contact.html" class="block text-gray-700">Contact</a>
         <a href="team.html" class="block text-gray-700">Team</a>
         
-          <a href="#donate" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-accent/10 border-accent hover:bg-accent/20">Donate</a>
-        
+          
+       <a href="index.html" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-gray-900 text-white">Donate</a>
+           
       </div>
     </div>
     
 </header>
 
 <!-- Hero -->
-<!-- Hero -->
+
 <section class="hero-section relative text-white">
   <div class="hero-img flex items-center justify-center">
     <div class="text-center px-4">
@@ -211,7 +225,7 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-gray-50 border-t">
+<footer class="bg-gray-900 text-gray-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-gray-500">
     © <span id="year"></span> AMAAC. All rights reserved.
   </div>
@@ -221,5 +235,15 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
+<script>
+    // small interactivity
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+  
 </body>
 </html>

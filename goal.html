@@ -19,6 +19,49 @@
       }
     }
   </script>
+  <style>
+    .hero-img {
+  background-image: url('/img/goal.avif'); /* replace with your image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+  position: relative;
+  display: flex; /* so content centers nicely */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 1;
+}
+
+.hero-img > * {
+  position: relative;
+  z-index: 2; /* makes text appear above overlay */
+}
+
+/* Mobile: show full image */
+@media (max-width: 768px) {
+  .hero-img {
+    background-size: contain;
+    background-position: center;
+    height: auto;
+    min-height: 600px;
+  }
+}
+
+
+
+  </style>
 </head>
 <body class="antialiased text-gray-800 bg-white">
 
@@ -48,8 +91,8 @@
           <a href="contact.html" class="text-gray-700 hover:text-primary-600">Contact</a>
           <a href="team.html" class="text-gray-700 hover:text-primary-600">Team</a>
          
-          <a href="#donate" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-accent/10 border-accent hover:bg-accent/20">Donate</a>
-        
+        <a href="index.html" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-gray-900 text-white">Donate</a>
+       
         </nav>
 
 
@@ -76,18 +119,20 @@
         <a href="team.html" class="block text-gray-700">Team</a>
         
         
-          <a href="index.html" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-accent/10 border-accent hover:bg-accent/20">Donate</a>
-        
+     <a href="index.html" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-gray-900 text-white">Donate</a>
+          
       </div>
     </div>
     
   </header>
 
 <!-- Hero -->
-<section class="relative bg-primary-500 text-white py-16">
-  <div class="max-w-5xl mx-auto px-4 text-center">
-    <h1 class="text-3xl md:text-4xl font-bold">Our Goals</h1>
-    <p class="mt-3 text-lg max-w-2xl mx-auto">A strategic roadmap for peace, justice, and empowerment for Muslim & Arab communities.</p>
+<section class="hero-section relative text-white">
+  <div class="hero-img flex flex-col items-center justify-center text-center px-4">
+    <h1 class="text-3xl md:text-4xl font-bold z-10">Our Goals</h1>
+    <p class="mt-3 text-lg max-w-2xl z-10">
+      A strategic roadmap for peace, justice, and empowerment for American Muslim & Arab communities.
+    </p>
   </div>
 </section>
 
@@ -97,7 +142,7 @@
   <p class="mt-3 text-gray-600">Our goals are anchored in five strategic themes that guide every AMAAC initiative.</p>
   <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
     <div class="p-6 bg-white border rounded-lg shadow-sm">
-      <h3 class="font-semibold text-primary-600">Civil Rights & Social Justice</h3>
+      <h3 class="font-semibold text-primary-600"> Defending Civil Rights and Social Justice </h3>
       <p class="mt-2 text-sm text-gray-600">Combating discrimination and promoting constitutional freedoms.</p>
     </div>
     <div class="p-6 bg-white border rounded-lg shadow-sm">
@@ -123,12 +168,26 @@
 <section class="bg-gray-50 py-12">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-2xl font-semibold text-gray-800">Promoting Understanding & Building Bridges</h2>
-    <p class="mt-3 text-gray-600">Transforming negative perceptions into mutual appreciation through dialogue, cultural exchange, and education.</p>
+    <p class="mt-3 text-gray-600">Transform negative perceptions of Arabs and 
+Muslims into deeper understanding and mutual appreciation in 
+Western societies.</p>
     <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
-      <li>Media campaigns showcasing Arab & Islamic culture.</li>
-      <li>Educational programs for schools & institutions.</li>
-      <li>Interfaith and intercultural dialogue initiatives.</li>
-      <li>Student & artist exchange programs.</li>
+      <li> Launching large-scale media awareness campaigns: Producing and 
+distributing multimedia content (documentaries, short videos, 
+articles, podcasts) that highlights the rich Arab and Islamic culture, 
+shared history, and civilizational contributions.</li>
+
+      <li> Developing Innovative Educational Programs: Designing and 
+implementing curricula and workshops for educational institutions 
+and schools in the West to provide accurate and unbiased 
+information about Islam and Arabs</li>
+      <li> Establishing Interfaith and Intercultural Dialogue Platforms: 
+Organizing conferences, seminars, and periodic meetings that bring together thought leaders, academics, and representatives of different 
+religions to foster constructive dialogue on shared issues.</li>
+      <li> Facilitating cultural and academic exchange programs: Launching 
+student, researcher, and artist exchange programs between the 
+United States and Arab and Islamic countries to enhance firsthand 
+experiences.</li>
     </ul>
   </div>
 </section>
@@ -137,38 +196,94 @@
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
   <h2 class="text-2xl font-semibold text-gray-800">Supporting Communities & Protecting Rights</h2>
   <p class="mt-3 text-gray-600">Defending civil and human rights, and building capacity for self-sufficiency.</p>
-  <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
-    <li>Legal support for discrimination victims.</li>
-    <li>Leadership training for youth and community members.</li>
-    <li>Supporting education, health, and empowerment projects.</li>
-    <li>Rapid humanitarian aid in crises.</li>
-  </ul>
+    <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+      <li> Providing legal and moral support to victims of discrimination: 
+Establishing a network of lawyers and volunteers to provide legal 
+advice and support to those affected by Islamophobia and Arab 
+hatred, and documenting these incidents. </li>
+      <li> Launching leadership capacity-building programs: Developing 
+workshops and training initiatives for young Muslims and Arabs to 
+enhance their skills in leadership, civic engagement, and advocacy. </li>
+      <li> Supporting sustainable development projects: Collaborating with 
+local and international organizations in Arab and Islamic countries 
+to support education, health, women's empowerment, and 
+entrepreneurship projects, with a focus on building community self
+sufficiency..</li>
+      <li> Providing humanitarian and relief assistance: Rapidly responding 
+to humanitarian crises in the Arab and Islamic world by providing 
+material and moral support to those affected. </li>
+    </ul>
+  
 </section>
 
 <!-- Influencing Policy -->
 <section class="bg-gray-50 py-12">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-2xl font-semibold text-gray-800">Influencing Policy</h2>
-    <p class="mt-3 text-gray-600">Engaging decision-makers to shape fair and balanced U.S. policies affecting Arab & Muslim communities.</p>
-    <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
-      <li>Independent policy research & recommendations.</li>
-      <li>Engagement with lawmakers & stakeholders.</li>
-      <li>Hosting forums with experts and policymakers.</li>
-      <li>Strategic alliances with human rights organizations.</li>
-    </ul>
+  <p class="mt-3 text-gray-600"> For AMAAC to be an influential voice in 
+shaping US foreign policy relevant to the Arab and Islamic world.</p>
+  <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+    <li>Conducting in-depth policy research and analysis: Establishing a 
+specialized research center that provides independent studies and 
+analyses of US policies in the region and their impact on societies.</li>
+    <li>* Active Participation in the Decision-Making Process: Building 
+strong relationships with members of Congress, administration 
+officials, and policy advisors to provide informed and influential 
+recommendations.</li>
+    <li> Organizing forums and dialogue conferences with decision
+makers: Hosting events that bring together experts and decision
+makers to discuss pressing issues and offer practical solutions.</li>
+    <li>Building strategic alliances with relevant organizations: 
+Collaborating with research centers, human rights organizations, and 
+other civil society organizations to enhance joint efforts to defend 
+justice.</li>
+  </ul>
+  
   </div>
+
 </section>
 
 <!-- Innovation & Adaptation -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
   <h2 class="text-2xl font-semibold text-gray-800">Innovation & Adaptation</h2>
-  <p class="mt-3 text-gray-600">Ensuring sustainability by embracing technology, continuous learning, and global partnerships.</p>
+  <p class="mt-3 text-gray-600"> Ensuring the Council's sustainability and 
+effectiveness by adopting best practices and adapting to changing 
+challenges. </p>
   <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
-    <li>Digital platforms & social media outreach.</li>
-    <li>Regular evaluation & program updates.</li>
-    <li>Building a global network of partners.</li>
-    <li>Training staff & volunteers for emerging challenges.</li>
+<li> Investing in digital technology: Developing modern digital 
+platforms and effectively utilizing social media to disseminate 
+messages, engage with the public, and build a supportive 
+community for the Council. </li>
+<li> Continuous Evaluation and Program Development: Conducting 
+periodic evaluations of all initiatives and programs to ensure their 
+effectiveness and adjusting them based on results to maximize 
+impact. </li>
+
+    <li> Building a Global Network of Partners: Establishing strong 
+relationships with Arab and Islamic organizations, governments, and 
+international institutions to foster collaboration and exchange of 
+expertise.</li>
+    <li> Developing Internal Competencies: Providing ongoing training to 
+staff members and volunteers to ensure they possess the skills and 
+knowledge necessary to achieve the Council's goals.</li>
   </ul>
+
+</section>
+
+<section class="bg-gray-100 py-16">
+  <div class="max-w-5xl mx-auto px-4 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary-600">
+      Our Commitment
+    </h2>
+    <p class="mt-4 text-lg text-gray-700 leading-relaxed">
+      These objectives combine to form an ambitious roadmap for the 
+      <strong>American Council for Arab and Muslim Affairs (AMAAC)</strong>. 
+      Each objective will be pursued with dedication and commitment, 
+      with a focus on transparency and accountability to ensure the Council 
+      is truly a strong and influential voice for peace, justice, and mutual 
+      understanding.
+    </p>
+  </div>
 </section>
 
 <!-- Footer -->
@@ -181,6 +296,17 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+
+<script>
+    // small interactivity
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+  
 
 </body>
 </html>
