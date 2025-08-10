@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>American Muslim & Arab Affairs Council (AMAAC)</title>
+  <meta name="description" content="AMAAC — Building bridges of understanding, promoting justice, empowering communities." />
+
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind Play CDN (fast prototype; replace with a build for production) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    /* Tailwind config: customize colors & font */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f5f7ff',
+              100: '#e6eefc',
+              500: '#0f4c81', /* deep navy */
+              600: '#0b3a64'
+            },
+            accent: '#d6b85a' /* warm gold */
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* small extra styling for image aspect */
+    
+    .hero-section {
+  height: 100vh; /* full screen height */
+}
+
+.hero-img {
+  background-image: url('/img/img1.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center; /* show the top part */
+}
+
+  </style>
+</head>
+<body class="antialiased text-gray-800 bg-white">
+
+  <!-- NAV -->
+  <header class="bg-white shadow-sm sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="#" class="flex items-center gap-3">
+          <!-- Replace with your logo.svg or image -->
+          <img src="img/logo.jpg" 
+
+     alt="AMAAC Logo" 
+     class="h-12 w-auto rounded-md object-contain">
+
+          <div class="hidden sm:block">
+            <span class="font-semibold text-lg">AMAAC</span>
+            <div class="text-xs text-gray-500">American Muslim & Arab Affairs Council</div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#" class="text-gray-700 hover:text-primary-600">Home</a>
+          <a href="#about" class="text-gray-700 hover:text-primary-600">About</a>
+          <a href="#work" class="text-gray-700 hover:text-primary-600">Our Work</a>
+          <a href="#get-involved" class="text-gray-700 hover:text-primary-600">Get Involved</a>
+          <a href="#news" class="text-gray-700 hover:text-primary-600">News</a>
+          <a href="#contact" class="text-gray-700 hover:text-primary-600">Contact</a>
+          <a href="#donate" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-accent/10 border-accent hover:bg-accent/20">Donate</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobileBtn" aria-label="Open menu" class="p-2 rounded-md hover:bg-gray-100">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu (hidden by default) -->
+    <div id="mobileMenu" class="md:hidden hidden border-t">
+      <div class="px-4 py-3 space-y-2">
+        <a href="#" class="block text-gray-700">Home</a>
+        <a href="#about" class="block text-gray-700">About</a>
+        <a href="#work" class="block text-gray-700">Our Work</a>
+        <a href="#get-involved" class="block text-gray-700">Get Involved</a>
+        <a href="#news" class="block text-gray-700">News</a>
+        <a href="#contact" class="block text-gray-700">Contact</a>
+        <a href="#donate" class="block text-gray-700 font-medium">Donate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+<section class="relative overflow-hidden">
+  <!-- Hero Image with text overlay -->
+  <div class="relative h-[60vh] lg:h-[72vh] w-full hero-img flex items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+        American Muslim & Arab Affairs Council
+      </h1>
+      <p class="mt-3 text-lg sm:text-xl max-w-2xl">
+        Building bridges of understanding, promoting justice, amplifying voices, and empowering Arab and Muslim communities in the USA and worldwide.
+      </p>
+    </div>
+  </div>
+
+  <!-- White content section -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 relative">
+    <div class="bg-white/95 backdrop-blur-md rounded-xl shadow-xl p-6 md:p-12 grid md:grid-cols-2 gap-6 items-center">
+      <div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight text-primary-600">
+          Our Mission
+        </h2>
+        <p class="mt-4 text-gray-600">
+          We defend rights, support sustainable development, and advance progress and prosperity through education, civic engagement, and community leadership.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#donate" class="inline-flex items-center px-5 py-2 rounded-md bg-primary-500 text-white shadow hover:bg-primary-600">Support Our Mission</a>
+          <a href="#about" class="inline-flex items-center px-5 py-2 rounded-md border border-gray-200 text-gray-700 hover:bg-gray-50">Learn More</a>
+          <a href="#get-involved" class="inline-flex items-center px-5 py-2 rounded-md bg-accent/20 text-accent hover:bg-accent/30">Get Involved</a>
+        </div>
+      </div>
+
+      <!-- Right column: image/quote -->
+      <div class="hidden md:block">
+        <figure class="h-56 md:h-44 lg:h-56 rounded-md overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&q=80&w=1200&fit=crop" alt="Community gathering" class="w-full h-full object-cover">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- WELCOME + MISSION AT A GLANCE -->
+    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+      <div class="grid md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-2">
+          <h2 class="text-2xl font-semibold text-gray-800">Welcome to AMAAC</h2>
+          <p class="mt-3 text-gray-600 leading-relaxed">
+            We are dedicated to fostering a vibrant, informed, and empowered American Muslim and Arab community. We ensure our voices are heard, our rights are protected, and our contributions to American society are recognized and celebrated.
+          </p>
+
+          <p class="mt-3 text-gray-600">
+            AMAAC is a platform for hope, a bridge for understanding, and a voice for justice. Join us in building a more just and inclusive world.
+          </p>
+
+          
+        </div>
+
+
+        
+        <!-- Quick contact / donate card -->
+        <aside class="p-6 bg-gradient-to-tr from-primary-50 to-white border rounded-lg shadow-sm">
+          <h3 class="text-lg font-semibold text-primary-600">Support Our Work</h3>
+          <p class="mt-2 text-sm text-gray-600">Your donation fuels advocacy, legal help, and community programs.</p>
+          <a id="donate" href="#donate" class="mt-4 inline-block px-4 py-2 rounded-md bg-primary-500 text-white">Donate Now</a>
+
+          <!-- <div class="mt-6">
+            <h4 class="text-sm font-medium text-gray-700">Newsletter</h4>
+            <form class="mt-3 flex gap-2" onsubmit="event.preventDefault(); alert('Thanks — replace with real signup!')">
+              <label for="email" class="sr-only">Email</label>
+              <input id="email" type="email" required placeholder="Your email" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary-300" />
+              <button type="submit" class="px-4 py-2 bg-accent text-white rounded-md">Subscribe</button>
+            </form>
+          </div>
+           -->
+        </aside>
+      </div>
+    </section>
+    <!-- Hero Section with Big Image -->
+<!-- Hero Section with Big Image and Cards -->
+<section class="relative bg-primary-500">
+  <div class="absolute inset-0">
+    <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80" 
+         alt="Cultural Unity" 
+         class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black/50"></div> <!-- Dark overlay -->
+  </div>
+  
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+    <h2 class="text-3xl font-bold text-white text-center mb-10">Our Mission</h2>
+
+    <!-- Cards Grid -->
+    <div class="grid sm:grid-cols-3 gap-4">
+      <!-- Card 1 -->
+      <div class="p-4 bg-white border rounded-lg shadow-lg">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 flex items-center justify-center rounded-md bg-primary-50 text-primary-600">
+            <!-- Handshake icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7 7 11-11" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-sm font-semibold">Building Cultural Bridges</p>
+            <p class="text-xs text-gray-500">Fostering intercultural dialogue & exchange</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="p-4 bg-white border rounded-lg shadow-lg">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 flex items-center justify-center rounded-md bg-primary-50 text-primary-600">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-sm font-semibold">Protecting Rights</p>
+            <p class="text-xs text-gray-500">Legal support & civil rights advocacy</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="p-4 bg-white border rounded-lg shadow-lg">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 flex items-center justify-center rounded-md bg-primary-50 text-primary-600">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-sm font-semibold">Influencing Policy</p>
+            <p class="text-xs text-gray-500">Research, policy guidance, and civic engagement</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Latest News / Events -->
+    <section id="news" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+      <div class="flex items-center justify-between">
+        <h2 class="text-xl font-semibold">Latest News & Projects</h2>
+        <a href="#" class="text-sm text-primary-600">View all</a>
+      </div>
+
+      <div class="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- news item -->
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+          <img src="https://images.unsplash.com/photo-1520975914490-8a6e2b9a9f6f?auto=format&q=60&w=1200&fit=crop" alt="" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-gray-800">Community Dialogue on Civic Engagement</h3>
+            <p class="text-sm text-gray-500 mt-2">Date: Aug 01, 2025 — Join leaders and youth for a discussion on civic participation.</p>
+            <a href="#" class="mt-3 inline-block text-primary-600 text-sm">Read more →</a>
+          </div>
+        </article>
+
+        <!-- duplicate placeholders -->
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&q=60&w=1200&fit=crop" alt="" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-gray-800">Legal Clinic: Know Your Rights</h3>
+            <p class="text-sm text-gray-500 mt-2">Free legal help for community members facing discrimination.</p>
+            <a href="#" class="mt-3 inline-block text-primary-600 text-sm">Read more →</a>
+          </div>
+        </article>
+
+        <article class="bg-white border rounded-lg overflow-hidden shadow-sm">
+          <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&q=60&w=1200&fit=crop" alt="" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-gray-800">Cultural Festival: Celebrating Heritage</h3>
+            <p class="text-sm text-gray-500 mt-2">An evening of music, food, and learning to celebrate cultural diversity.</p>
+            <a href="#" class="mt-3 inline-block text-primary-600 text-sm">Read more →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+<!-- Impact Quote + Newsletter -->
+<!-- Impact Quote + Newsletter -->
+<section class="bg-white py-16">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-black">
+    
+    <!-- Quote -->
+    <blockquote class="text-xl italic mb-8">
+      "AMAAC has been a bridge of hope, bringing communities together and protecting the rights of those who need it most."
+    </blockquote>
+    <p class="text-sm text-gray-600 mb-12">— Community Partner</p>
+
+    <!-- Call to Action -->
+    <h2 class="text-2xl font-bold mb-4">
+      Join us in building a future of peace and understanding.
+    </h2>
+    <p class="text-gray-700 mb-8">
+      Subscribe to our newsletter for updates on our work, events, and opportunities to get involved.
+    </p>
+
+    <!-- Newsletter Form -->
+    <form class="max-w-md mx-auto flex gap-2" onsubmit="event.preventDefault(); alert('Subscribed — replace with real backend')">
+      <input type="email" placeholder="Enter your email" 
+             class="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500" required>
+      <button type="submit" 
+              class="px-6 py-3 bg-primary-600 text-white font-semibold rounded-md hover:bg-primary-700">
+        Subscribe
+      </button>
+    </form>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact" class="bg-gray-900 text-gray-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid md:grid-cols-3 gap-8">
+    
+    <!-- About -->
+    <div>
+      <div class="flex items-center gap-3">
+        <img src="img/logo.jpg" 
+          
+     alt="AMAAC Logo" 
+     class="h-12 w-auto rounded-md object-contain">
+
+        <div>
+          <p class="font-semibold text-white">AMAAC</p>
+          <p class="text-xs opacity-80">American Muslim & Arab Affairs Council</p>
+        </div>
+      </div>
+      <p class="mt-3 text-sm opacity-80">
+        We build bridges of understanding, defend rights, and empower communities.
+      </p>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h4 class="font-medium text-white">Contact</h4>
+      <p class="mt-2 text-sm opacity-80">123 Main Street, City, State ZIP</p>
+      <p class="mt-2 text-sm opacity-80">Phone: (555) 555-5555</p>
+      <p class="mt-2 text-sm opacity-80">Email: info@amaac.org</p>
+    </div>
+
+    <!-- Social -->
+    <div>
+      <h4 class="font-medium text-white">Stay connected</h4>
+      <p class="mt-2 text-sm opacity-80">Follow us on our social media platforms for updates.</p>
+      <div class="mt-4 flex gap-3">
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-500 text-white hover:bg-primary-600 transition" aria-label="Facebook">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12..."></path></svg>
+        </a>
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-500 text-white hover:bg-primary-600 transition" aria-label="X">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12..."></path></svg>
+        </a>
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-500 text-white hover:bg-primary-600 transition" aria-label="Instagram">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12..."></path></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="border-t border-gray-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-sm opacity-70 flex flex-col sm:flex-row justify-between">
+      <p>© <span id="year"></span> AMAAC. All rights reserved.</p>
+      
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Auto-update year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+  </main>
+
+  <script>
+    // small interactivity
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
