@@ -87,6 +87,30 @@
   }
 }
 
+ #button{
+    margin-top: 50px;
+    margin-left: 20px;
+    
+cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adds the floating shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: float 2s infinite ease-in-out; /* Float animation */
+
+  
+
+}
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0); /* Default position */
+    }
+    50% {
+      transform: translateY(-20px); /* Moves up slightly */
+    }
+  }
+/* Ends Here */
+
+
   </style>
 </head>
 <body class="antialiased text-gray-800 bg-white">
@@ -220,7 +244,7 @@
         <aside class="p-6 bg-gradient-to-tr from-primary-50 to-white border rounded-lg shadow-sm" data-aos="fade-right" >
           <h3 class="text-lg font-semibold text-primary-600">Support Our Work</h3>
           <p class="mt-2 text-sm text-gray-600">Your donation fuels advocacy, legal help, and community programs.</p>
-          <a id="donate" href="#donate" class="mt-4 inline-block px-4 py-2 rounded-md bg-primary-500 text-white">Donate Now</a>
+          <a  href="#donate" class="mt-4 inline-block px-4 py-2 rounded-md bg-primary-500 text-white" id="button">Donate Now</a>
 
           <!-- <div class="mt-6">
             <h4 class="text-sm font-medium text-gray-700">Newsletter</h4>
