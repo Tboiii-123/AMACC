@@ -36,6 +36,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-position: top center; /* show the top part */
+  
 }
 
 .hero-img::before {
@@ -70,17 +72,17 @@
 <body class="antialiased text-gray-800 bg-white">
 
 <!-- Header -->
- <header class="bg-white shadow-sm sticky top-0 z-40">
+ 
+  <header class="bg-white shadow-sm sticky top-0 z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <a href="#" class="flex items-center gap-3">
           <!-- Replace with your logo.svg or image -->
-          <img src="img/logo.jpg" 
-
-     alt="AMAAC Logo" 
+               <img src="img/logo.jpg" alt="AMAAC Logo" 
      class="h-12 w-auto rounded-md object-contain">
+     
 
-          <div class="hidden sm:block">
+          <div class="">
             <span class="font-semibold text-lg">AMAAC</span>
             <div class="text-xs text-gray-500">American Muslim & Arab Affairs Council</div>
           </div>
@@ -91,12 +93,12 @@
           <a href="about.html" class="text-gray-700 hover:text-primary-600">About</a>
           <a href="work.html" class="text-gray-700 hover:text-primary-600">Our Work</a>
           <a href="involved.html" class="text-gray-700 hover:text-primary-600">Get Involved</a>
-          <a href="goal.html" class="text-gray-700 hover:text-primary-600">Goal</a>
+          <a href="goal.html" class="text-gray-700 hover:text-primary-600">Goals</a>
           <a href="contact.html" class="text-gray-700 hover:text-primary-600">Contact</a>
-          <a href="team.html" class="text-gray-700 hover:text-primary-600">Team</a>
          
-          <a href="#donate" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-accent/10 border-accent hover:bg-accent/20">Donate</a>
         
+       <a href="donate.html" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-gray-900 text-white">Donate</a>
+           
         </nav>
 
 
@@ -118,17 +120,19 @@
         <a href="about.html" class="block text-gray-700">About</a>
         <a href="work.html" class="block text-gray-700">Our Work</a>
         <a href="involved.html" class="block text-gray-700">Get Involved</a>
-        <a href="goal.html" class="block text-gray-700">Goal</a>
+        <a href="goal.html" class="block text-gray-700">Goals</a>
         <a href="contact.html" class="block text-gray-700">Contact</a>
-        <a href="team.html" class="block text-gray-700">Team</a>
         
         
-          <a href="index.html" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-accent/10 border-accent hover:bg-accent/20">Donate</a>
-        
+          
+       <a href="donate.html" class="ml-2 inline-flex items-center px-3 py-2 border rounded-md text-sm font-medium bg-gray-900 text-white">Donate</a>
+           
       </div>
     </div>
-    
+
   </header>
+
+
 
 <!-- Hero -->
 <section class="hero-img text-white py-16">
@@ -145,13 +149,13 @@
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
 
   <!-- Membership -->
-  <section class="bg-white border rounded-lg p-6 shadow-sm" data-aos="fade-right" >
-    <h2 class="text-2xl font-semibold text-gray-800">Become a Member</h2>
-    <p class="mt-3 text-gray-600"> Support our mission and receive exclusive 
+  <section class="bg-gray-900 border rounded-lg p-6 shadow-sm" data-aos="fade-right" >
+    <h2 class="text-2xl font-semibold text-white">Become a Member</h2>
+    <p class="mt-3 text-white"> Support our mission and receive exclusive 
 updates and opportunities.</p>
     <div class="mt-6 flex flex-wrap gap-4">
       <a href="#" class="px-5 py-2 rounded-md bg-primary-500 text-white hover:bg-primary-600">Suport </a>
-      <a href="#" class="px-5 py-2 rounded-md border hover:bg-gray-50">Learn More</a>
+      <a href="#" class="px-5 py-2 rounded-md border hover:bg-red-900 text-white">Learn More</a>
     </div>
   </section>
 
@@ -170,7 +174,7 @@ initiatives. Opportunities include: </p>
   </section>
 
   <!-- Donate -->
-  <section class="bg-white border rounded-lg p-6 shadow-sm" data-aos="fade-right" data-aos-delay="400">
+  <section class="bg-yellow-200 border rounded-lg p-6 shadow-sm" data-aos="fade-right" data-aos-delay="400">
     <h2 class="text-2xl font-semibold text-gray-800">Donate</h2>
     <p class="mt-3 text-gray-600"> Your financial contribution directly fuels our advocacy, 
 education, and legal efforts.</p>
@@ -192,7 +196,7 @@ contact your elected officials on critical issues.</p>
   </section>
 
   <!-- Newsletter & Social -->
-  <section class="bg-white border rounded-lg p-6 shadow-sm" data-aos="fade-right" data-aos-delay="800">
+  <section class="bg-green-100 border rounded-lg p-6 shadow-sm" data-aos="fade-right" data-aos-delay="800">
     <h2 class="text-2xl font-semibold text-gray-800">Stay Informed</h2>
     <p class="mt-3 text-gray-600">Subscribe to our newsletter and follow us on social media for updates and action opportunities.</p>
     <form class="mt-4 flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault(); alert('Thank you for subscribing!')">
@@ -218,67 +222,71 @@ story that can inspire change, we want to hear from you.</p>
 </main>
 
 <!-- Footer -->
-<footer id="contact" class="bg-gray-900 text-gray-300">
+
+<!-- Footer -->
+ <footer id="contact" class="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-800 text-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid md:grid-cols-3 gap-8">
     
     <!-- About -->
     <div>
       <div class="flex items-center gap-3">
         <img src="img/logo.jpg" 
-          
-     alt="AMAAC Logo" 
-     class="h-12 w-auto rounded-md object-contain">
+          alt="AMAAC Logo" 
+          class="h-12 w-auto rounded-md object-contain">
 
         <div>
-          <p class="font-semibold text-white">AMAAC</p>
-          <p class="text-xs opacity-80">American Muslim & Arab Affairs Council</p>
+          <p class="font-semibold text-yellow-400">AMAAC</p>
+          <p class="text-xs opacity-80 text-yellow-200">American Muslim & Arab Affairs Council</p>
         </div>
       </div>
-      <p class="mt-3 text-sm opacity-80">
+      <p class="mt-3 text-sm opacity-90">
         We build bridges of understanding, defend rights, and empower communities.
       </p>
     </div>
 
     <!-- Contact -->
     <div>
-      <h4 class="font-medium text-white">Contact</h4>
-      <p class="mt-2 text-sm opacity-80">123 Main Street, City, State ZIP</p>
-      <p class="mt-2 text-sm opacity-80">Phone: (555) 555-5555</p>
-      <p class="mt-2 text-sm opacity-80">Email: info@amaac.org</p>
+      <h4 class="font-medium text-yellow-400">Contact</h4>
+      <p class="mt-2 text-sm opacity-90">123 Main Street, City, State ZIP</p>
+      <p class="mt-2 text-sm opacity-90">Phone: (555) 555-5555</p>
+      <p class="mt-2 text-sm opacity-90">Email: info@amaac.org</p>
     </div>
 
     <!-- Social -->
-<div>
-  <h4 class="font-medium text-white" loading="lazy" decoding="async" fetchpriority="low">Stay connected</h4>
-  <p class="mt-2 text-sm opacity-80">Follow us on our social media platforms for updates.</p>
+    <div>
+  <h4 class="font-medium text-yellow-400">Stay connected</h4>
+  <p class="mt-2 text-sm opacity-90">Follow us on our social media platforms for updates.</p>
   <div class="mt-4 flex gap-3">
+    
     <!-- Facebook -->
-    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-500 text-white hover:bg-primary-600 transition" aria-label="Facebook" target="_blank" rel="noopener">
-      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.12 8.44 9.88v-6.99H7.9v-2.89h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.89h-2.34v6.99C18.34 21.12 22 16.99 22 12z"/>
+    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-400 text-blue-800 hover:bg-yellow-500 transition" aria-label="Facebook">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 5.013 3.676 9.162 8.438 9.878v-6.988h-2.54v-2.89h2.54V9.845c0-2.507 1.493-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.988C18.324 21.162 22 17.013 22 12z"/>
       </svg>
     </a>
-    <!-- X (Twitter) -->
-    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-500 text-white hover:bg-primary-600 transition" aria-label="X" target="_blank" rel="noopener">
-      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M23 3a10.9 10.9 0 01-3.14.86 4.48 4.48 0 001.96-2.48 9.03 9.03 0 01-2.85 1.1 4.52 4.52 0 00-7.7 4.13 12.8 12.8 0 01-9.3-4.7 4.48 4.48 0 001.4 6.06 4.41 4.41 0 01-2.05-.57v.06a4.52 4.52 0 003.63 4.43 4.5 4.5 0 01-2.04.08 4.52 4.52 0 004.22 3.15 9 9 0 01-5.6 1.93A9.43 9.43 0 012 19.54a12.72 12.72 0 006.88 2.01c8.26 0 12.78-6.84 12.78-12.78 0-.2 0-.39-.01-.58A9.06 9.06 0 0023 3z"/>
+
+    <!-- Twitter -->
+    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-400 text-blue-800 hover:bg-yellow-500 transition" aria-label="Twitter">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M22.46 6.003c-.793.352-1.644.589-2.54.696a4.418 4.418 0 001.94-2.43 8.828 8.828 0 01-2.796 1.07 4.404 4.404 0 00-7.5 4.015A12.49 12.49 0 013 4.793a4.404 4.404 0 001.363 5.873 4.37 4.37 0 01-1.997-.552v.056a4.404 4.404 0 003.534 4.314 4.414 4.414 0 01-1.992.076 4.406 4.406 0 004.116 3.058A8.834 8.834 0 012 19.543a12.454 12.454 0 006.757 1.982c8.108 0 12.544-6.717 12.544-12.544 0-.19-.004-.379-.013-.566a8.933 8.933 0 002.172-2.272z"/>
       </svg>
     </a>
+
     <!-- Instagram -->
-    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-500 text-white hover:bg-primary-600 transition" aria-label="Instagram" target="_blank" rel="noopener">
-      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M7.75 2A5.75 5.75 0 002 7.75v8.5A5.75 5.75 0 007.75 22h8.5A5.75 5.75 0 0022 16.25v-8.5A5.75 5.75 0 0016.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0120 7.75v8.5a3.75 3.75 0 01-3.75 3.75h-8.5A3.75 3.75 0 014 16.25v-8.5A3.75 3.75 0 017.75 4zm4.25 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.75-2.5a1 1 0 11-2 0 1 1 0 012 0z"/>
+    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-400 text-blue-800 hover:bg-yellow-500 transition" aria-label="Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.25a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/>
       </svg>
     </a>
+
   </div>
 </div>
 
   </div>
 
-  <div class="border-t border-gray-700">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-sm opacity-70 flex flex-col sm:flex-row justify-between">
+  <div class="border-t border-blue-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-sm opacity-80 flex flex-col sm:flex-row justify-between">
       <p>© <span id="year"></span> AMAAC. All rights reserved.</p>
-      
     </div>
   </div>
 </footer>
